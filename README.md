@@ -120,15 +120,14 @@
 
 ## 🔍 기능 설명
 ### 에코마켓
-<p align="center">
  <p><b>목록/상품 등록/수정 페이지</b></p>
  <img src="images/Diagram/gif/ecomarket1.gif" width="45%">
  <p><b>* 기능</b></p>
  <p>- 사용자 편의성을 고려한 페이징 처리와 검색 기능</p>
  <p>- 관리자만 상품 등록과 상품 수정 가능하도록 접근 제한</p>
  <p>- 상품 등록/수정 시 이미지 미리보기 기능</p>
-</p>
-<p align="center">
+ <br>
+
  <p><b>주문·결제 페이지</b></p>
  <img src="images/Diagram/gif/ecomarket2.gif" width="45%">
  <p><b>* 기능</b></p>
@@ -137,8 +136,8 @@
  <p>- PortOne의 카카오페이 결제 API를 활용한 간편결제</p>
  <p>- 주문한 상품과 배송지 정보, 결제 정보를 확인할 수 있는 주문완료 페이지</p>
 </p>
-
 <br>
+
 <details>
   <summary>분리배출 페이지</summary>
   <div markdown="1">
