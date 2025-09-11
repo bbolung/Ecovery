@@ -16,7 +16,7 @@
   * 관람평 게시판에서 실제 관람객들이 남긴 관람 후기를 보고 다른 사용자가 원하는 문화예술을 선택할 때 도움을 받을 수 있습니다.
   * 관람평 게시판의 댓글을 통해 다른 사용자와 소통하며 문화적 경험을 넓힐 수 있습니다.
 
-개발 기간 : 2025.05.19 ~ 2025.05.23
+개발 기간 : 2025.07.07 ~ 2025.08.08
 
 <br>
 
@@ -91,7 +91,22 @@
 <details>
   <summary>Usecase Diagram</summary>
   <div markdown="1">
-    <img src="/images/Diagram/Usecase.png" >
+    <p align="center">
+     <img src="/images/Diagram/Usecase/Usecase_AI.png" width="35%">
+     <img src="/images/Diagram/Usecase/Usecase_login.png" width="35%">
+    </p>
+    <p align="center">
+     <img src="/images/Diagram/Usecase/Usecase_admin.png" width="35%">
+     <img src="/images/Diagram/Usecase/Usecase_user.png" width="35%">
+    </p>
+    <p align="center">
+     <img src="/images/Diagram/Usecase/Usecase_notice.png" width="35%">
+     <img src="/images/Diagram/Usecase/Usecase_env.png" width="35%">
+    </p>
+    <p align="center">
+     <img src="/images/Diagram/Usecase/Usecase_free.png" width="35%">
+     <img src="/images/Diagram/Usecase/Usecase_eco.png" width="45%">
+    </p>
   </div>
 </details>
 <details>
@@ -104,51 +119,65 @@
 <br>
 
 ## 🔍 기능 설명
+### 에코마켓
+<p align="center">
+ <p><b>목록/상품 등록/수정 페이지</b></p>
+ <img src="images/Diagram/gif/ecomarket1.gif" width="45%">
+ <p><b>* 기능</b></p>
+ <p>- 사용자 편의성을 고려한 페이징 처리와 검색 기능</p>
+ <p>- 관리자만 상품 등록과 상품 수정 가능하도록 접근 제한</p>
+ <p>- 상품 등록/수정 시 이미지 미리보기 기능</p>
+</p>
+<p align="center">
+ <p><b>주문·결제 페이지</b></p>
+ <img src="images/Diagram/gif/ecomarket2.gif" width="45%">
+ <p><b>* 기능</b></p>
+ <p>- 로그인한 사용자만 장바구니/구매 버튼 사용 가능하도록 접근 제한</p>
+ <p>- 배송지 정보를 모두 입력하도록 유효성 검사 확인</p>
+ <p>- PortOne의 카카오페이 결제 API를 활용한 간편결제</p>
+ <p>- 주문한 상품과 배송지 정보, 결제 정보를 확인할 수 있는 주문완료 페이지</p>
+</p>
+
+<br>
 <details>
   <summary>분리배출 페이지</summary>
   <div markdown="1">
-    <img src="/images/Pages/" >
-    <p><br>사용자가 지역을 선택 후 이미지를 등록하면 AI가 인식한 품목의 1차 분류에 따른 세부 항목을 선택할 수 있는 선택창을 제공합니다.<br>사용자가 선택한 지역과 세부 항목에 따른 예상 수수료와 해당 자치구 페이지로 이동할 수 있는 기능을 제공합니다.<br>잘못된 품목으로 알려줄 경우 신고할 수 있는 버튼을 제공하여 사용자에게 올바른 정보를 제공할 수 있도록 구현하였습니다.</p>
-   <br>
+    <img src="images/Diagram/gif/AI.gif" width="80%">
+    <br>
   </div>
 </details>
 <details>
   <summary>관리자 페이지</summary>
   <div markdown="1">
-    <img src="/images/Pages/" >
-    <p><br>서비스 운영 현황에 대한 통계와 분리배출 및 회원 현황을 알려주는 대시보드가 관리자 페이지의 메인 화면입니다.<br>분리배출 기록을 최신순으로 확인할 수 있고, 각 내역의 사진과 예측 결과 등 상세 정보를 확인할 수 있습니다.<br>회원 관리의 목록 페이지는 모든 회원에 대한 정보를 확인할 수 있습니다.<br>회원 관리 클릭 시 회원에 대한 상세 정보를 modal창으로 확인할 수 있고, 회원의 권한을 수정할 수 있습니다.</p>
+    <img src="images/Diagram/gif/admin.gif" width="80%">
     <br>
   </div>
 </details>
 <details>
   <summary>마이 페이지</summary>
   <div markdown="1">
-    <img src="/images/Pages/" >
-    <p><br>modal창을 통해서 회원 정보를 수정할 수 있습니다.<br>장바구니 버튼을 클릭 시 사용자가 장바구니에 담은 에코마켓 상품들의 리스트를 볼 수 있고, 선택한 상품을 주문할 수 있습니다.<br>구매이력 페이지는 에코마켓에서 구매한 전체 상품의 구매이력 목록을 확인할 수 있고, 클릭 시 구매이력 상세 페이지로 이동합니다.</p>
+    <img src="images/Diagram/gif/mypage.gif" width="80%">
     <br>
   </div>
 </details>
 <details>
   <summary>로그인 및 회원가입</summary>
   <div markdown="1">
-    <img src="/images/Pages/" >
-    <p><br>유효성 검사, 비밀번호 중복 인증을 통해 보안을 높일 수 있도록 회원가입을 구현하였습니다.<br>로그인 시 유효성 검사를 통해 이메일과 비밀번호를 모두 입력하도록 설정하였습니다.<br>소셜 로그인은 카카오와 구글을 사용하여 로그인할 수 있습니다.<br>기존 회원의 닉네임이 중복 시 숫자를 자동 부여하도록 설정하였습니다.</p>
+    <img src="images/Diagram/gif/signup_login.gif" width="80%">
     <br>
   </div>
 </details>
 <details>
   <summary>환경톡톡·공지사항 게시판</summary>
   <div markdown="1">
-    <img src="/images/Pages/" >
-    <p><br>기본 CRUD를 구현한 게시판입니다.<br>작성자 편의를 위해 본문 작성 시 Toast UI Editor를 적용하여 본문 이미지 삽입, 실시간 글자 수 확인, 텍스트 스타일 편집 및 미리보기를 제공합니다.</p>
+    <img src="images/Diagram/gif/board.gif" width="80%">
     <br>
   </div>
 </details>
 <details>
   <summary>무료나눔 게시판</summary>
   <div markdown="1">
-    <img src="/images/Pages/" >
-    <p><br>기본 CRUD를 구현한 게시판입니다.<br>나눔 상품 등록/수정 시 등록한 이미지를 미리보기로 확인할 수 있고, 개별 삭제가 가능하도록 'X' 버튼을 설정하였습니다.<br>댓글을 통해 사용자 간의 소통 공간을 조성하였습니다.</p>
+    <img src="images/Diagram/gif/free.gif" width="80%">
     <br>
   </div>
 </details>
